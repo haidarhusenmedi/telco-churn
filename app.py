@@ -1,6 +1,3 @@
-from google.colab import files
-
-app_code = """
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -87,11 +84,3 @@ if st.button('Hitung Probabilitas Churn 🚀'):
     else:
         st.success("✅ **STATUS: AMAN (BERTAHAN)**")
         st.write("Profil jaringan dan tagihan menunjukkan pelanggan ini dalam kondisi stabil dan kemungkinan besar akan memperpanjang layanan.")
-"""
-
-# Menyimpan dan mendownload file
-with open('app.py', 'w', encoding='utf-8') as f: 
-    f.write(app_code.strip())
-
-files.download('app.py')
-print("File 'app.py' dengan fitur tampilan metrik akurasi berhasil dibuat dan sedang didownload!")
